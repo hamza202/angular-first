@@ -6,8 +6,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./event.component.css']
 })
 export class EventComponent implements OnInit {
-
-  constructor() { }
+    trueStatus = true;
+    toggleFunction() {
+      if (this.trueStatus === true) {
+        return this.trueStatus = false;
+      } else {
+        this.trueStatus = true;
+      }
+    }
+  constructor() {
+      this.toggleFunction();
+  }
 
   ngOnInit() {
   }
