@@ -1,0 +1,33 @@
+<p *ngFor="let p of person; let i = index">
+<span>{{i+1}} - {{p.name}}</span>
+</p>
+<p *ngIf='nameStats === 2; else antherName '>
+    {{name}}
+</p>
+
+<p>
+    <ng-template #antherName>
+        hello world
+    </ng-template>
+</p>
+
+<div [ngSwitch]='100' >
+    <p *ngSwitchCase='200'>
+        jspsld
+    </p>
+    <p *ngSwitchCase="100">
+        {{'welcome' | uppercase}}
+    </p>
+    <p *ngSwitchDefault="">
+        default case
+    </p>
+</div>
+<div>
+    <img [src]="img_src" alt="">
+</div>
+<div [ngClass]=TotalClass>
+   {{img_src}}
+</div>
+<h3>
+    {{birthday | date:"yyyy:MM:dd"}}
+</h3>
