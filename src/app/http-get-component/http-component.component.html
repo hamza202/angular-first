@@ -1,0 +1,15 @@
+<div class="container">
+    <div *ngFor="let user of users">
+            <ul *ngFor="let one of user; let i=index" class="list-group mt-5">
+                <li class="list-group-item" *ngIf="i<3">
+                    {{one.id}}
+                </li>
+                <li class="list-group-item" *ngIf="i<3">
+                    {{one.name}}
+                </li>
+                <li class="list-group-item" *ngIf="i<3">
+                    {{one.address.street}}
+                </li>
+            </ul>
+    </div>
+</div>
